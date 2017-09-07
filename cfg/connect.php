@@ -31,34 +31,3 @@ function Connect(){
 function pre($str){
 	echo "<pre>";print_r($str); echo"</pre>";
 }
-
-
-
-
-
-// final class Environment
-// {
-
-//     public static function Instance()
-//     {
-//         static $inst = null;
-
-//         if ($inst === null) {
-//             $inst = new Environment();
-//         }
-//         return $inst;
-//     }
-
-//     private function __construct()
-//     {
-
-//     }
-// }
-
-// class ConnectBlueprint(){
-// 	public $this->$servername = "10.3.0.81";
-// 	public $this->$username = "bramjrd21_ovf";
-// 	public $this->$password = "QUXQH6snYR";
-// 	public $this->$dbname = "bramjrd21_ovf";
-
-// }

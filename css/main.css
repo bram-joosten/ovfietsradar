@@ -1,9 +1,5 @@
 #viewport{
 	max-height: 80vh;
 	overflow: scroll;
-}
-
-line{
-	stroke:rgb(255,0,0);
-	stroke-width:2
+	-webkit-overflow-scrolling: touch;
 }

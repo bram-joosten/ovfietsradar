@@ -101,7 +101,7 @@ function Cron(){
 	$k = 0; $arrindex = 0;
 	for ($j=0; $j < $from_src_len ; $j++) {
 
-		//step 1: ALWAYS test if we're comparing the correct locations with each other
+		// step 1: ALWAYS test if we're comparing the correct locations with each other
 		if
 			($from_src[$j]['location_code'] === $from_db[$k]['location_code']){
 			// echo $j.": ";
@@ -116,7 +116,7 @@ function Cron(){
 				$diff[] = ['location_code' => $from_src[$j]['location_code'],
 							'bike_qty' => $from_src[$j]['current_amt'],
 							'src_fetchtime' => $from_src[$j]['src_fetchtime']];
-							// print_r($diff[$arrindex]); $arrindex++;
+							print_r($diff[$arrindex]); $arrindex++;
 			}
 			// echo "<br>";
 			$k++;
@@ -143,7 +143,7 @@ function Cron(){
 				$diff[] = ['location_code' => $from_db[$j]['location_code'],
 							'bike_qty' => null,
 							'src_fetchtime' => time() ];//this is a lazy, didn't want to add a new row of fetchtimes to current_locations table.
-				// print_r($diff);
+				print_r($diff);
 				// echo "<br>";
 				// $j--;
 				$k++;

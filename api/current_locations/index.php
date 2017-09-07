@@ -16,7 +16,7 @@ function GetCurrentLocations(){
 		$stmt = $db->prepare($sql);
 
 
-		//Dumb but fast search/replace. Because some location codes are inconsistent, replace with this list. Keep it ordered in the same manner because the for loop will only iterate once. Keep the last array item empty to avoid undefined index issues.
+		//Dumb but fast search/replace. Because some location codes are inconsistent, replace this list. Keep it ordered in the same manner because the for loop will only iterate once. Keep the last array item empty to avoid undefined index issues.
 		$loc = array();
 		$cleanup =[["apn001","Alphen aan den Rijn"],
 					["asd008","Amsterdam IJzijde"],
@@ -57,8 +57,9 @@ function GetCurrentLocations(){
 
 		    }
 		}
-
 		function compareByLocation($a, $b) {
+			
+			
 		  return strcasecmp($a["name"], $b["name"]);
 		}
 

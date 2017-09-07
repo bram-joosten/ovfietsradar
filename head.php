@@ -12,6 +12,7 @@
     <meta name="author" content="Bram Joosten">
     <meta name="description" content="Be smarter about your OV bike rental, learn about your location">
     <meta name="keywords" content="OV Bike, historic data, prediction, public transport">
+    <meta name="google-site-verification" content="MI3Vm5ow8ga3cY3yccJwzwmHQNJlwJrGO2ZDgxvbytk" />
     <!-- <link rel='stylesheet' href='//fonts.googleapis.com/css?family=font1|font2|etc' type='text/css'> -->
     <style type="text/css">
     <?php include_once(realpath(dirname(__FILE__)).'/node_modules/bootstrap/dist/css/bootstrap.min.css') ?>
