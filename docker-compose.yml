@@ -1,0 +1,50 @@
+web:
+  image: php:7.0-apache
+  links:
+    - db:mysql
+  ports:
+    - 2000:80
+  volumes:
+    - .:/var/www/html/
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: piemel
+  volumes:
+    - ./db:/var/lib/mysql
+app_dbmgr:
+  image: corbinu/docker-phpmyadmin
+  links:
+    - db:mysql
+  ports:
+    - 2001:80
+  environment:
+    MYSQL_USERNAME: root
+    MYSQL_ROOT_PASSWORD: piemel
+
+
+# wordpress:
+#   image: wordpress:php7.0
+#   links:
+#     - wordpress_db:mysql
+#   ports:
+#   - 8080:80
+#   volumes:
+#     - ./files:/var/www/html
+#     - ./server:/var
+# wordpress_db:
+#   image: mariadb
+#   environment:
+#     MYSQL_ROOT_PASSWORD: piemel
+#   volumes:
+#     - ./database:/var/lib/mysql
+# phpmyadmin:
+#   image: corbinu/docker-phpmyadmin
+#   links:
+#     - wordpress_db:mysql
+#   ports:
+#     - 8181:80
+#   environment:
+#     MYSQL_USERNAME: root
+#     MYSQL_ROOT_PASSWORD: piemel
+
