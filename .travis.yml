@@ -11,7 +11,7 @@ before_deploy:
 deploy:
   - provider: script
     skip_cleanup: false
-    script: rsync -rv --delete-after $TRAVIS_BUILD_DIR/ ovfietsradar.nl@ssh087889.bytenet.nl:dev.ovfietsradar.nl/
+    script: rsync -r --delete-after $TRAVIS_BUILD_DIR/src/ ovfietsradar.nl@ssh087889.bytenet.nl:dev.ovfietsradar.nl/
     on:
       branch: develop
   # - provider: script
