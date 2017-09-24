@@ -12,7 +12,7 @@ deploy:
   provider: script
   skip_cleanup: true
   # script: rsync -rv --progress --delete-after . ovfietsradar.nl@ssh087889.bytenet.nl:dev.ovfietsradar.nl
-  script: rsync -r --info=progress2 --delete-after $TRAVIS_BUILD_DIR/src ovfietsradar.nl@ssh087889.bytenet.nl:dev.ovfietsradar.nl
+  script: rsync -r --include="src" --info=progress2 --delete-after $TRAVIS_BUILD_DIR ovfietsradar.nl@ssh087889.bytenet.nl:dev.ovfietsradar.nl
   on:
     branch: develop
 addons:
